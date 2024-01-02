@@ -65,11 +65,8 @@ public class MiniDesafios {
         System.out.printf("Valor original: R$ %.2f\n", precoOriginal);
         System.out.printf("Desconto de %d%% aplicado. Valor com desconto: R$ %.2f\n", percentualDesconto, valorASerPago);
 
-        // O \n é um caractere de escape usado para representar uma quebra de linha
-        // O %d é um especificador de formato que indica que um valor inteiro. No caso o %% é usado para representar o
-        // caractere de porcentagem literal. Isso ocorre porque o caractere % tem um significado especial em
-        // strings formatadas (é usado para indicar um especificador de formato), então, se você quiser incluir o
-        // caractere % literalmente, você precisa usar %%.
+        // O \n é um caractere de escape usado para representar uma quebra de linha.
+        // O %d é um especificador de formato que indica que um valor inteiro. No caso o %% é usado para representar o caractere de porcentagem literal. Isso ocorre porque o caractere % tem um significado especial em strings formatadas (é usado para indicar um especificador de formato), então, se você quiser incluir o caractere % literalmente, você precisa usar %%.
 
     }
 }
