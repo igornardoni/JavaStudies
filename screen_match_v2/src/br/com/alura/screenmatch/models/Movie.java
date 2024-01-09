@@ -10,8 +10,14 @@ public class Movie {
     private int userReview;
     private final boolean includedInPlan;
 
-    public Movie(String name, String genre, int duration, int year,
-                 double officialReview, boolean includedInPlan) {
+    public Movie (
+            String name,
+            String genre,
+            int duration,
+            int year,
+            double officialReview,
+            boolean includedInPlan
+    ) {
         this.name = name;
         this.genre = genre;
         this.duration = duration;
@@ -20,13 +26,37 @@ public class Movie {
         this.includedInPlan = includedInPlan;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public double getOfficialReview() {
+        return officialReview;
+    }
+
+    public boolean isIncludedInPlan() {
+        return includedInPlan;
+    }
+
     public void showTechnicalSheet() {
-        System.out.printf("br.com.alura.screenmatch.models.Filme: %s\n", name);
+        System.out.printf("Filme: %s\n", name);
         System.out.printf("Gênero: %s\n", genre);
         System.out.println("Duração: " + duration + " minutos");
         System.out.printf("Ano de lançamento: %d\n", year);
         System.out.printf("Avaliação IMDb: %.1f\n", officialReview);
-        System.out.printf("br.com.alura.screenmatch.models.Filme incluso no plano atual: %b\n", includedInPlan);
+        System.out.printf("Filme incluso no plano atual: %b\n", includedInPlan);
     }
 
     public void newReview(double rating) {
@@ -35,7 +65,7 @@ public class Movie {
     }
 
 
-    double getFinalUsersReview() {
+    public double getFinalUsersReview() {
         if (userReview > 0) {
             return newUsersReview / userReview;
         } else {
