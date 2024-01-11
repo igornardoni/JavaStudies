@@ -40,6 +40,7 @@ public class Principal {
         starWarsEmpire.setNome("Star Wars - O Império Contra-Ataca");
         starWarsEmpire.setAnoDeLancamento(1980);
         starWarsEmpire.setDuracaoEmMinutos(124);
+        starWarsEmpire.setDiretor("George Lucas");
 
         System.out.println(); // Quebra de linha
 
