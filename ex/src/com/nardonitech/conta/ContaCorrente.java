@@ -6,7 +6,8 @@ public class ContaCorrente extends ContaBancaria {
     public void cobrarTarifaMensal() {
         double tarifaMensal = saldo * tarifa;
         saldo -= tarifaMensal;
-        System.out.printf("Tarifa mensal de R$ %.2f cobrada. Saldo atualizado: R$ %.2f\n", tarifaMensal, saldo);
+        System.out.printf("Tarifa mensal de R$ %.2f cobrada. " +
+                "Saldo atualizado: R$ %.2f\n", tarifaMensal, saldo);
     }
 
 }
