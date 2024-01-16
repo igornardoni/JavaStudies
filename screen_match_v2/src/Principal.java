@@ -1,4 +1,6 @@
 import br.com.alura.screenmatch.calculations.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculations.FiltroRecomendacao;
+import br.com.alura.screenmatch.models.Episodio;
 import br.com.alura.screenmatch.models.Filme;
 import br.com.alura.screenmatch.models.Serie;
 
@@ -42,6 +44,10 @@ public class Principal {
         starWarsEmpire.setDuracaoEmMinutos(124);
         starWarsEmpire.setDiretor("George Lucas");
 
+        starWarsEmpire.avalia(8.5);
+        starWarsEmpire.avalia(10);
+        starWarsEmpire.avalia(8);
+
         System.out.println(); // Quebra de linha
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -52,5 +58,14 @@ public class Principal {
         System.out.printf("Tempo total para maratonar os " +
                 "programas selecionados: %d minutos", calculadora.getTempoTotal());
 
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtrar(godfather);
+        filtro.filtrar(starWarsEmpire);
+
+        Episodio episodio001 = new Episodio();
+        episodio001.setNumero(15);
+        episodio001.setSerie(lost);
+        episodio001.setTotalVisualizacoes(352);
+        filtro.filtrar(episodio001);
     }
 }
